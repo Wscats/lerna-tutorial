@@ -85,3 +85,20 @@ npm i
 # 安装子项目依赖
 lerna bootstrap
 ```
+
+# pnpm 代替
+
+上面这种方式还能用 pnpm 的方案代替
+
+先在项目根目录建立一个 pnpm 的 workspcae 配置文件 pnpm-workspace.yaml，意味着这是一个 monorepo：
+
+```js
+packages:
+  # 所有在 packages/ 和 components/ 子目录下的 package
+  - 'packages/**'
+  - 'components/**'
+  # 不包括在 test 文件夹下的 package
+  - '!**/test/**'
+```
+
+然后直接在根目录 pnpm i 就可以代替原来的 npm i + lerna bootstrap
