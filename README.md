@@ -104,3 +104,7 @@ packages:
 ```
 
 然后直接在根目录 pnpm i 就可以代替原来的 npm i + lerna bootstrap
+
+# 参考文章
+
+- [Monorepo 項目管理方案：lerna + yarn workspace / pnpm](https://icode9.com/content-4-1180398.html)
