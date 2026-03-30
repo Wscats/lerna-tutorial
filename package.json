@@ -3,5 +3,13 @@
   "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "test": "jest --coverage",
+    "type-check": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
